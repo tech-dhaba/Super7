@@ -1,0 +1,10 @@
+since computer understand binary we need to convert the c code to binary
+
+steps of compilation in c
+1. preprocessing : elimination of macros (#, header files) .c => .i/.p  -E
+2. compilation : convert the HLL to assembly language .i/.p => .s       -s
+3. assembler : convert the assembly file to binary .s => .o/.obj        -c
+4. linking : combine various piece of code together:		     	-o
+	4.1 static linking
+	4.2 dynamic linking
+
