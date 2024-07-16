@@ -46,6 +46,16 @@ void duplicate(int *a,int len)
 	while(k<len)
 	{printf(" %d, ",a[k]);k++;	}
 }
+void search(int *a,int x)
+{
+int p; 
+	for(int i=0;i<sizeof(a);i++)
+	{
+		if(x==a[i])
+		{	p=i; break;}
+	}
+	printf("Index = %d",p);
+}
 int main()
 {
 	printf("Enter the rray \n");
@@ -56,8 +66,9 @@ int main()
 	}
 int l = largest(a,15);
 reverse(a,15);
-printf("\nAfter removing Duplicates = ");
-duplicate(a,15);
-printf("\nLargest element = %d\n",l);
+//printf("\nAfter removing Duplicates = ");
+search(a,5);
+//duplicate(a,15);
+//printf("\nLargest element = %d\n",l);
 	
 }	

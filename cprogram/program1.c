@@ -1,11 +1,17 @@
 // reverse a string 
 #include <stdio.h>
 #include <string.h>
-void reverse(char* s,int len)
+void reverse(int* s,int len)
 {
+int *ptr;
+for(int i=0;i<len;i++)
+{
+	ptr=(int*)s[i];
+	printf("%d",ptr);
+}
 int l =0;
 int r =len-1;
-char c;
+int c;
 while(l<r)
 {
  c=s[l];
@@ -13,12 +19,11 @@ s[l]=s[r];
 s[r]=c;
 l++;r--;
 }
-puts(s);
 }	
 
  int main()
 {
-char c[]="tejsaw bhasker";
+int c[]={1,2,3,4,5,6};
 //gets(c);
 //fgets(c,50,stdin);
 //read(1,c,50);
