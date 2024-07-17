@@ -1,26 +1,25 @@
-#include<stdio.h>
-void read(int *,int *);
-void swap(int *,int *);
-
-int main(void){
-	int a,b;
-	read(&a,&b);
-	printf("\nBefore the function call: a = %d and b = %d\n", a, b);
-	swap(&a,&b);
-	printf("\nAfter the function call: a = %d and b = %d\n", a, b);
+#include <stdio.h>
+void swap(int *p, int *q)
+{
+	int c;
+	c = *p;
+	*p = *q;
+	*q = c;
+}
+int main()
+{
+	int a[] = {1,2,3,4,5};
+	int len = sizeof(a)/sizeof(int);
+	for (int i=0; i<len/2; i++)
+	{
+		swap(&a[i],&a[len-i-1]);
+	}
+	printf("after reverse\n");
+	for (int i=0; i<len; i++)
+	{
+		printf("%d",a[i]);
+	}
 	return 0;
 }
 
-void read(int *x,int *y)
-{
-	printf("Enter 2 nos:");
-	scanf("%d %d",x,y);
-}
-void swap(int *x,int *y)
-{
-	int temp;
-	temp=*x;
-	*x=*y;
-	*y=temp;
-	
-}
+
