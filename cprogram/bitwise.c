@@ -44,9 +44,19 @@ int countsetbits(int num )//count set bits
 	return count;
 }
 //7
-int ispower(unsigned int num )// to find the power of 2 using bitwise
+void ispower(int num )// to find the power of 2 using bitwise
 {
-	return ((num>0)&&(num &(num-1)==0));
+	int count=0;int pos=1;
+	while(num!=0)
+	{
+		if(num&1)
+		 {count+=1;}
+		pos++;num>>=1;	
+	}
+	if(count==1&&pos!=1)
+	{printf("Is a pwer of 2");}
+	else
+	{ printf("not a power of 2");}
 }
 //8
 int positionofmsb(int num)// to find the postion of right most set bit
@@ -57,7 +67,7 @@ int positionofmsb(int num)// to find the postion of right most set bit
 		if(num&1==1){
 		return position ;}
 		else 
-		{ position++; num<<=1;}	
+		{ position++; num>>=1;}	
 	}
 }
 //9
@@ -99,39 +109,43 @@ int equals(int num1,int num2)
 	return !(num1^num2);
 }
 //13
+int sumofpositionofsetbit(int num)
+{
+	int count=0;int position=1;
+	while(num!=0)
+	{
+		if(num & 1)
+		{count = count +position; }
+		num>>=1;
+		position++;
+	}
+	return count;	
+} 
+//14
 int greater(int num1,int num2)
 {
-	if(positionofmsb(num1)>positionofmsb(num2))
-	{return num1;}
-	else if(positionofmsb(num1)<positionofmsb(num2))
+	if(sumofpositionofsetbit(num1)>sumofpositionofsetbit(num2))
+	{ return num1; }
+	else 
 	{return num2;}
-	else
-	{
-		if(countsetbits(num1)>countsetbits(num2))
-	  	{ return num1;}
-		else 
-		{ return num2;}
-		
-	}
+	
 }
 int min(int num1 ,int num2)
 {
-	if(positionofmsb(num1)<positionofmsb(num2))
+	
+	if(sumofpositionofsetbit(num1)>sumofpositionofsetbit(num2))
+	{ return num2; }
+	else 
 	{return num1;}
-	else if(positionofmsb(num1)>positionofmsb(num2))
-	{return num2;}
-	else
-	{
-		if(countsetbits(num1)<countsetbits(num2))
-	  	{ return num1;}
-		else
-		{return num2;} 
-	}
+	
 }
 int main(void)
 {
-	int c=greater(6,7);
-	{printf("maximum no %d\n",c); }
+	int c=greater(29,28);
+	printf("maximum no %d\n",c);
+	ispower(8);
+	int t = positionofmsb(32);
+	printf("position %d\n",t);
 	return 0;
 }
 
