@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int cal(int *x,int *y,char *op){
 	switch(*op){
 		case '+':
@@ -18,8 +17,6 @@ int cal(int *x,int *y,char *op){
 		default:
 			printf("error");
 			return 0;
-
-
 	}
 }
 
@@ -32,5 +29,4 @@ int main(){
 	scanf(" %c",&op);
 	printf("Result= %d\n",cal(&a,&b,&op));
 	return 0;
-
 }
