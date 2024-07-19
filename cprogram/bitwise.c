@@ -74,7 +74,7 @@ int positionofmsb(int num)// to find the postion of right most set bit
 int oppositesign(int x,int y)// checks if the number are opposite sign
 
 {
-	int c;
+	
 	if((x^y)<0){ 
 	return 1;}
 	else	{
@@ -94,7 +94,7 @@ int parity(int num)// checks the parity of a number
 	return 0;}
 }
 //11
-unsigned int extract(int x,int y,unsigned int num)
+unsigned int extract(int x,int y,unsigned int num)// to extract number btw a given position 
 {
     int width = y- x + 1;
     unsigned int mask = (1 << width) - 1;
@@ -104,12 +104,12 @@ unsigned int extract(int x,int y,unsigned int num)
 	
 }
 //12
-int equals(int num1,int num2)
+int equals(int num1,int num2)//yo find whethter the numbers are equals using only bitwise
 {
 	return !(num1^num2);
 }
 //13
-int sumofpositionofsetbit(int num)
+int sumofpositionofsetbit(int num)//to find the sum of position of set bits and calculate the greatest
 {
 	int count=0;int position=1;
 	while(num!=0)
@@ -122,7 +122,7 @@ int sumofpositionofsetbit(int num)
 	return count;	
 } 
 //14
-int greater(int num1,int num2)
+int greater(int num1,int num2)// to calculate the greatest
 {
 	if(sumofpositionofsetbit(num1)>sumofpositionofsetbit(num2))
 	{ return num1; }
@@ -130,7 +130,8 @@ int greater(int num1,int num2)
 	{return num2;}
 	
 }
-int min(int num1 ,int num2)
+//15
+int min(int num1 ,int num2)// to calculate the smallest
 {
 	
 	if(sumofpositionofsetbit(num1)>sumofpositionofsetbit(num2))
