@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <pthread.h>
-#include <unistd.h> // for sleep function
+#include <unistd.h> 
+
 volatile int shared_variable = 0;
 void *thread_function(void *arg) {
     int thread_id = *((int *)arg);
     for (int i = 0; i < 5; ++i) {
-        shared_variable++; // Increment shared variable
+        shared_variable++;
         printf("Thread %d: shared_variable = %d\n", thread_id, shared_variable);
         sleep(1);
     }

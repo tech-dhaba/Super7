@@ -39,7 +39,7 @@ void calculateArea(struct Shape shape) {
         }
         case TRIANGLE: {
             double s = (shape.properties.triangle.side1 + shape.properties.triangle.side2 + shape.properties.triangle.side3) / 2;
-            double area = sqrt(s * (s - shape.properties.triangle.side1) * (s - shape.properties.triangle.side2) * (s - shape.properties.triangle.side3));
+           double area = sqrt(s * (s - shape.properties.triangle.side1) * (s - shape.properties.triangle.side2) * (s - shape.properties.triangle.side3));
             printf("Triangle Area: %.2f\n", area);
             break;
         }

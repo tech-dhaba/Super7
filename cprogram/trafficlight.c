@@ -44,7 +44,7 @@ int main (int argc, char const *argv[]) {
                 printf(ANSI_COLOR_GREEN   "Traffic Light: GREEN\n"  ANSI_COLOR_RESET );
                 sleep(5);
                 currentState = YELLOW;
-                break;
+               break;
             default:
                 printf(ANSI_COLOR_RESET    "Error: Invalid state.\n"  ANSI_COLOR_RESET );
                 return 1;

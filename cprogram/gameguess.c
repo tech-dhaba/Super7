@@ -13,7 +13,7 @@ enum GameState {
 
 int main() {
     enum GameState state = START;
-    int number_to_guess, guess, num_attempts = 1;
+    int number_to_guess, guess, num_attempts = 0;
     srand(time(NULL));
 
     while (1) {
@@ -47,15 +47,15 @@ int main() {
                 break;
             case WIN:
 		printf("\033]11;#000FFF\007");
-		sleep(5);
-		printf("\033]11;#000000\007");
                 printf("Do you want to play again? (1 for yes, 0 for no): ");
                 if (scanf("%d", &guess) != 1) {
+		printf("\033]11;#000000\007");
                     printf("Invalid input. Exiting game.\n");
                     state = LOSE;
                     break;
                 }
                 if (guess == 1) {
+		printf("\033]11;#000000\007");
                     state = START;
                     num_attempts = 0;
                 } else {
