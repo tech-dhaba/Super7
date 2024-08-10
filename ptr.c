@@ -1,4 +1,4 @@
-/*
+#if 0
 //Program 1: create , initialize and usd pointer
 #include <stdio.h>
 int main() {
@@ -13,8 +13,8 @@ printf("Print address of ptr = %p\n",&ptr);
 printf("Print value of ptr = %p\n",ptr);
 return 0;
 }
-
-nclude <stdio.h>
+#elif 0
+#include <stdio.h>
 int main() {
 int *x,*y;
 int num1,num2,temp;
@@ -28,6 +28,8 @@ temp=*x;
 printf("After swapping : %d%d", *x,*y);
 return 0;
 }
+
+#elif 0
 //Program 2: add two integer using pointer
 #include <stdio.h>
 int main() {
@@ -44,7 +46,7 @@ printf("Addition of two number are = %d\n",sum);
 return 0;
 }
 
-
+#elif 0
 //Program 3: Swap two number
 #include <stdio.h>
 int main() {
@@ -61,7 +63,7 @@ printf("After swapping : %d%d", *x,*y);
 return 0;
 }
 
-
+#elif 0
 //Program 4: 
 #include<stdio.h>
 int add(int x,int y)
@@ -102,7 +104,7 @@ return 0;
 }
 
 
-
+#elif 0
 #include<stdio.h>
 void swap(int *x, int *y){
 	int temp = *x;
@@ -120,7 +122,7 @@ void main() {
 }
 
 
-
+#elif 0
 #include <stdio.h>
 #define SIZE 10
 
@@ -165,7 +167,7 @@ void main() {
  }
 
 
-
+#elif 0
 //Void Pointers: Create a function that takes a void pointer and the size of the data it points to. The function should print the value based on the data type.
 #include<stdio.h>
 typedef enum{
@@ -223,7 +225,7 @@ return 0;
 }
 
 
-
+#elif 0
 
 //Array Pointers: Implement a function that takes a pointer to an array of integers and its size, and then calculates the sum of its elements.
 #include<stdio.h>
@@ -250,7 +252,7 @@ return 0;
   
 
 
-
+#elif 0
 #include <stdio.h>
 void swap(int *a,int *b ){
 int tmp=*b;
@@ -295,7 +297,7 @@ return 0;
 
 
 
-
+#elif 0
 //Iterating through Arrays with Pointers: Write a code snippet that iterates through all elements of an array using a pointer.
 //Program :
 #include<stdio.h>
@@ -312,7 +314,7 @@ return 0;
 
 
 
-
+#elif 0
 //Reversing Array with Pointers: Write code that reverses the order of elements in an array using two pointers.
 #include<stdio.h>
 int main() {
@@ -329,7 +331,7 @@ return 0;
 
 
 
-
+#elif 0
 //Finding Minimum/Maximum: How can you find the minimum or maximum element within an array efficiently using pointers?
 #include<stdio.h>
 int main() {
@@ -369,7 +371,7 @@ return 0;
 
 
 
-
+#elif 0
 //1 Array Traversal with Pointers: Write a C program to traverse an array using a pointer and modify each element by adding a constant value.
 
 #include <stdio.h>
@@ -395,15 +397,14 @@ return 0;
 
 
 
-
-
+#elif 0
 //2 Finding Minimum/Maximum: Write a C program to find the minimum and maximum elements in an array using pointers.
 
 
 #include <stdio.h>
 int max(int *ptr,int len)
 {
-	int i,max=0;
+
 	for(i=0 ; i<len ; i++)
 	{
 		if(*(ptr+i)>max)
@@ -432,7 +433,7 @@ int main(){
 int a[]={1,2,3,4,5};
 int *ptr =a;
 int len = sizeof (a) / sizeof (int);
-printf("Element in an array : \n");
+printWrite a function to perform bitwise AND of all numbers in a given range [m, n].f("Element in an array : \n");
 for(int i=0 ; i<len ; i++)
 	{
 		printf("%d\n",*(ptr +i));
@@ -449,10 +450,7 @@ return 0;
 
 
 
-
-
-//3 Linear Search: Write a C program to search for a given element in an array using a pointer-based implementation of linear search.
-
+#elif 0
 
 
 
@@ -460,7 +458,7 @@ return 0;
 #include<stdio.h>
 int main() 
 {
-	int a[]={1,2,3,4,5,6,7,8,9,10};
+	int a[]={1,2,3,4,5,6,7,8,9,10};Write a function to perform bitwise AND of all numbers in a given range [m, n].
 	int *ptr =a;
 	int len = sizeof(a) / sizeof (int);
 	printf("Element in an array : \n");
@@ -474,7 +472,7 @@ int main()
 	for(int i =0 ; i<len ; i++)
 	{
 		if(*(ptr +i)==search)
-		{
+git@github.com:tech-dhaba/Super7.git		{
 			printf("a[i] : %d\n",i);
 		}
 	}
@@ -483,8 +481,7 @@ int main()
 
 
 
-
-
+#elif 0
 //4 Array Reversal: Write a C program to reverse the order of elements in an array using pointers (without a temporary array).
 
 
@@ -512,8 +509,7 @@ return 0;
 
 
 
-
-
+#elif 0
 //Write a C program to declare a 2D array (matrix) with dimensions m (rows) and n (columns), where m and n are provided by the user.
 
 
@@ -563,12 +559,10 @@ return 0;
 
 
 
-
 //                                                    DAY 5
 
 
-
-
+#elif 0
 // 1 Write a function that checks if a number is even using the bitwise AND operator (&).
 
 
@@ -590,7 +584,7 @@ int main()
 
 
 
-
+#elif 0
 // 2 Write a function that checks if a number is odd using the bitwise XOR operator (^).
 
 #include<stdio.h>
@@ -612,7 +606,7 @@ int main()
 
 
 
-
+#elif 0
 // 3 Write a function that sets the least significant bit (LSB) of a number to 1 using the bitwise OR operator (|).
 
 
@@ -628,9 +622,9 @@ return 0;
 
 
 
-
+#elif 0
 // 4 Write a function that clears the most significant bit (MSB) of a number using a bitwise AND with a specific mask.
-
+elseif 0
 // 5 Write a function that swaps the values of two variables using only bitwise XOR.
 
 
@@ -657,10 +651,10 @@ int main()
 }
 
 
-*/
 
 
 
+#elif 1
 // 6 Write a function that counts the number of set bits (1s) in a given integer.
 
 
@@ -679,3 +673,337 @@ int main(void){
 	printf("%d",bin[j]);
 	return 0;
 }
+
+
+
+
+#elif 0
+// 7 Write a function that checks if a number is a power of 2 using bitwise operations.
+
+
+#include<stdio.h>
+int pwr(int num1)
+{
+	int len=sizeof(num1)*8;
+	int pos = 1;
+	int cnt=0;
+	for(int i=1;i<len;i++)
+	{
+
+		if (num1&pos)
+		{
+			cnt++;
+		}
+		pos = pos << 1;
+
+	}
+	printf("cnt value if %d \n", cnt);	
+}
+int main() 
+{
+	int n;
+	printf("Enter any number : \n");
+	scanf("%d",&n);
+	pwr(n);
+	return 0;
+}
+
+
+#elif 0
+// Counting the Number of Set Bits (1s) in an Integer 
+
+
+#include<stdio.h>
+int countsetbit(int num){
+    int count =0;
+    while(num){
+        count=count+(num&1);
+        num = num>>1;
+    }
+    return count;
+    }
+int main(){
+    int n;
+    printf("Enter any integer : ");
+    scanf("%d",&n);
+    countsetbit(n);
+    printf("Set bit in this integer is : %d",countsetbit(n));
+    return 0;
+}
+
+
+
+#elif 0
+// check if the number is power of two
+
+
+#include<stdio.h>
+int pwr(int num)
+{
+	int count =0;
+	int len = sizeof(num)*8;
+	if(num == 1)
+	{
+		printf("No it is not the power of 2");
+	}
+	else{
+	for(int i =0 ; i<len ; i++ )
+	{
+		count = count + (num & 1);
+		num = num>>1;
+	}
+	if(count==1)
+	{
+		printf("Yes it is power of 2");
+	}
+	else
+	{
+		printf("No it is not the power of 2");
+	}
+	}
+}
+int main()
+{
+	int n;
+	printf("Enter any integer : ");
+	scanf("%d",&n);
+	pwr(n);
+	return 0;
+}
+
+
+
+#elif 0
+// Clearing the Rightmost Set Bit
+
+#include<stdio.h>
+int crmb(int num)
+{
+	int c=num&(num-1);
+	return c ;
+}
+int main()
+{
+	int n;
+	printf("Enter any integer : ");
+	scanf("%d",&n);
+	crmb(n);
+	printf("After clearing right most bit : %d",crmb(n));
+	return 0;
+}
+
+
+
+#elif 0
+//Write a function that checks if two numbers have opposite signs using bitwise XOR.
+
+
+#include<stdio.h>
+int check(int num1, int num2)
+{
+	if((num1^num2)<0)
+	{
+		printf("The number has opposite sign");
+	}
+	else
+	{
+		printf("The number has same sign");
+	}
+}
+int main()
+{
+	int n,m;
+	printf("Enter any value : \n");
+	scanf("%d%d",&n,&m);
+	check(n,m);
+	//printf("%d",check(n,m));
+	return 0;
+}
+
+
+
+
+#elif 0
+//Write a function that determines the parity (even or odd number of set bits) of a number using bitwise XOR.
+
+
+#include<stdio.h>
+int paritycheck(int num)
+{
+	int len = sizeof(num)*8;
+	int count=0;
+	//for(int i=0 ; i<len ; i++)
+	while(num){
+	//	int count =0;
+		count = count + (num&1);
+		num=num>>1;
+	}
+	return count;
+	
+}
+int main()
+{
+	int n;
+	printf("Enter any integer : ");
+	scanf("%d",&n);
+	paritycheck(n);
+	printf("%d",paritycheck(n));
+	return 0;
+}
+
+
+
+
+#elif 0
+//find the length of string
+
+
+#include<stdio.h>
+
+int main()
+ {
+    char *charptr = "Helloworld";
+    char Name[]={'H','e','l','l','o','w','o','r','l','d'} ;
+    int len = sizeof(Name)/sizeof(char);
+    int count=0;
+    for(int i=0 ; i<*charptr ; i++){
+        printf("%c",*charptr++);
+        if(*charptr == '\0'){
+            printf("%c",*charptr);
+            count = i+1;
+            break;
+        }
+
+    }
+    printf("%d\n",count);
+    printf("%d\n",len);
+    return 0;
+}
+
+
+
+#elif 0
+// reverse a string
+#include<stdio.h>
+#include<string.h>
+char new_string[50];
+void reverse(char *string ,char *reversed_string )
+{
+	int len = strlen(string);
+	for(int i=0; i<len ; i++)
+	{
+		reversed_string[i]=string[len - 1 - i];
+
+	}
+}
+void main()
+{
+	char *n = "Hello";
+	reverse(n,new_string);
+	printf("%s",new_string);
+	return 0;
+}
+
+#elif 0
+//reverse a word
+#include<stdio.h>
+#include<string.h>
+char arr[50];
+void swap(char *string )
+{
+	int space_index=0;
+        int len = strlen(string);
+        for(int i=0; i<len ; i++)
+        {
+		if( *string==' ')
+		{
+			printf("%d\n",i);
+			space_index = i;
+			break;
+		}
+		else
+		{
+
+		}
+		
+			string++;
+	}
+	int j=0;
+	for(int i=space_index ; i<=len ; i++)
+	{
+		arr[j++]=*string++;
+		printf("%s",arr);
+	}
+	arr[j++]= ' ';
+	for(int i=0 ; i<=space_index ; i++)
+	{
+		arr[j++] = string[i];
+		printf("%s",arr);
+	}
+	printf("new string %s\n",arr);
+			
+}
+void main(char)
+{
+        char *n = "Hello World";
+        swap(n);
+       // printf("%s",n);
+        return 0;
+}
+
+#elif 0
+#include<stdio.h>
+#include<string.h>
+struct student{
+    int roll;        
+    float cgpa;      
+    char name[100];  
+    void *ptr;
+   
+};
+int swap(void *a,void *b)
+{
+	*a=*a+*b;
+	*b=*a-*b;
+	*a=*a -*b;
+}
+int main() {
+    struct student s1;
+    s1.roll = 042;  
+    s1.cgpa = 8.2; 
+    //s1.name = "Khushdeep";
+    strcpy(s1.name,"Khushdeep");
+    s1.ptr=&s1;
+
+    struct student s2;
+    s2.roll = 024;
+    s1.cgpa = 9.0;
+    //s1.name = "Deep";
+    strcpy(s2.name,"Deep");
+    s2.ptr=&s2;
+/*
+    printf("Name = %s\n",s1.name);
+    printf("Roll no. =  %d\n",s1.roll);
+    printf("cgpa = %f\n",s1.cgpa);
+    printf("Address = %d",&s1.ptr);
+    */
+    swap((void*)&s1,(void*)&s2);
+    //printf("%d",swap(&s1,&s2));
+    return 0;
+}
+
+#else
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
