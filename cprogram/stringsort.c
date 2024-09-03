@@ -24,7 +24,6 @@ void freeMemory(char **strings, int count) {
     }
     free(strings);
 }
-
 int main() {
     int n;
     printf("Enter the number of strings: ");
@@ -38,7 +37,6 @@ int main() {
     sortStrings(strings, n);
     printf("\nSorted Strings:\n");
     printStrings(strings, n);
-    
     freeMemory(strings, n);
     return 0;
 }

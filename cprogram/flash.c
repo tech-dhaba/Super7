@@ -1,17 +1,23 @@
 #include<stdio.h>
 #include<stdint.h>
 #include<unistd.h>
-
+typedef struct{
+ int i; 
+ char c; 
+ char a;
+}l;
 int main(){
-while(1){
-printf("\033]11;#00FFFF\007");
-sleep(2);
-printf("\033]11;#0000FF\007");
-sleep(2);
-printf("\033]11;#ff0000\007");
-sleep(2);
-printf("\033]11;#00AFFF\007");
-sleep(2);
+	l a;
+  unsigned char*b=(unsigned char*)&a;
+   a.i=0;
+   *b=0x2c;
+   b=b+1;
+   *b=0x1;
+   b=b+3;
+   *b='a';
+   b=b+1;
+   *b='A';
+   printf("%d",a.i);
+   printf("%c\n",a.c);
+   printf("%c\n",a.a);
 }
-}
-

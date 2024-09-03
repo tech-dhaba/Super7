@@ -1,9 +1,5 @@
-// linked list program 
-// to create node in run time we have to use melloc as to create node at run time 
-
-
 #include<stdio.h>
-#include<stdlib.h>// malloc 
+#include<stdlib.h> 
 typedef struct node
 {
  	int data;
@@ -43,6 +39,15 @@ void delete(node *start,int info)
 	}	
  	 p->next=temp->next; 
 
+}
+node* reverse_list(node* head) {
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+    node* new_head = reverse_list(head->next);
+    head->next->next = head;
+    head->next = NULL;
+    return new_head;
 } 
 int main()
 {
@@ -57,6 +62,10 @@ int main()
 	insert(&top,12);
 	insert(&top,25);
 	delete(top,25);
-	print(top);
+        print(top);
+        printf("\n");
+        node *top1=reverse_list(top);
+	print(top1);
+        printf("\n");
 	return 0;
 }
