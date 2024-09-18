@@ -15,7 +15,7 @@ scanf("%d",&(ptr->a));
 printf("enter float value\n");
 scanf("%f",&(ptr->b));
 printf("enter char value\n");
-strcpy((ptr->c),'a');
+scanf("%c",&(ptr->c));
 }
 
 int main(){
